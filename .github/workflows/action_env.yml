@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Add mask
+      run: |
+        echo "::add-mask::${{ secrets.SECRET_URL }}" 
     - name: Refresh Token
       run: | 
         #echo "::add-mask::${{ github.sha }}" >> $GITHUB_ENV
