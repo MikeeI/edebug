@@ -1,5 +1,5 @@
 <?php
 
-echo $COMMIT_SHA
+echo $_ENV["COMMIT_SHA"]
 
 ?>
