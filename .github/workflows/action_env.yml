@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Add mask
-      run: |
-        echo "::add-mask::${{ secrets.SECRET_URL }}" 
-    - name: Refresh Token
+    #- name: Add mask
+    #  run: |
+    #    echo "::add-mask::${{ secrets.SECRET_URL }}" 
+    #- name: Refresh Token
       run: | 
         #echo "::add-mask::${{ github.sha }}" >> $GITHUB_ENV
         #echo "::add-mask::${{ github.sha }}" 
-        echo "COMMIT_SHA=$GITHUB_SHA" >> $GITHUB_ENV
-        echo "COMMIT_SHA=$GITHUB_SHA"
+        echo "COMMIT_SHA=${{ secrets.SECRET_URL }}" >> $GITHUB_ENV
+    #    echo "COMMIT_SHA=$GITHUB_SHA"
     - name: php
       run: |
         php info.php
