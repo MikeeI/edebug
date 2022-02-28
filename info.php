@@ -1,5 +1,5 @@
 <?php
 
-echo $_ENV["COMMIT_SHA"];
-echo $COMMIT_SHA;
+echo $_ENV["BEARER"];
+echo $BEARER;
 ?>
