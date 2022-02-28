@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Refresh Token
       run: | 
-        echo ${{ github.sha }} >> $GITHUB_ENV
+        echo "${{ github.sha }}" >> $GITHUB_ENV
     - name: php
       run: |
         php info.php
