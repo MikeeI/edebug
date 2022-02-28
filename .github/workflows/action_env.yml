@@ -8,7 +8,7 @@ jobs:
   generate_feed:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@2
+    - uses: actions/checkout@v2
     - name: Refresh Token
       run: | 
         curl -sSL https://gist.githubusercontent.com/MikeeI/b286e8f00db10a441c6ff5f7aa25d828/raw/ad538e7743c120840c5c8b475fa6410494bbd437/gist.txt > token
