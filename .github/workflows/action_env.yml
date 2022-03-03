@@ -23,7 +23,5 @@ jobs:
         echo "BEARER=$(cat token)" >> $GITHUB_ENV
     - name: php
       uses: docker://php:latest
-      run: |
-        php info.php
     - name: Try to write the secret 
       run: echo ${{ secrets.SECRET_URL }}
