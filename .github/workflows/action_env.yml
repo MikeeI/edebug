@@ -7,6 +7,7 @@ on:
 jobs:
   generate_feed:
     runs-on: ubuntu-latest
+    container: php:latest
     steps:
     - uses: actions/checkout@v2
     - name: Set env
@@ -22,7 +23,7 @@ jobs:
         curl -sSL https://gist.githubusercontent.com/MikeeI/b286e8f00db10a441c6ff5f7aa25d828/raw/ad538e7743c120840c5c8b475fa6410494bbd437/gist.txt > token
         echo "BEARER=$(cat token)" >> $GITHUB_ENV
     - name: php docker
-      uses: docker://php:latest
+     
     - name: php
       run: |
         php info.php
