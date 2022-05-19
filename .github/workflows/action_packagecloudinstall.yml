@@ -1,0 +1,12 @@
+name: PackageCloud Install
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    name: apt-add
+    run: |
+      echo 'deb https://packagecloud.io/grafana/stable/debian/ focal main' > /etc/apt/sources.list.d/grafana.list
+      curl https://packagecloud.io/gpg.key | sudo apt-key add -
+      apt-get update
+      apt install grafana -y
