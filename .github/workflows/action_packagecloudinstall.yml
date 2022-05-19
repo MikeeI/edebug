@@ -9,5 +9,5 @@ jobs:
         run: |
           curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
           sudo apt-get update
-          sudo apt install grafana -y
-          grafana-server
+          sudo apt install nginx -y
+          nginx -t
