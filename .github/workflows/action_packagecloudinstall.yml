@@ -7,6 +7,7 @@ jobs:
     steps :
       - name: apt-add
         run: |
+          echo -e "deb https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main\ndeb-src https://packagecloud.io/varnishcache/varnish60lts/ubuntu/ bionic main\n" | sudo tee /etc/apt/sources.list.d/varnishcache_varnish60lts.list
           sudo echo 'deb https://packagecloud.io/grafana/stable/debian/ focal main' > /etc/apt/sources.list.d/grafana.list
           sudo curl https://packagecloud.io/gpg.key | sudo apt-key add -
           sudo apt-get update
