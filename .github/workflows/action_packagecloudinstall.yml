@@ -7,7 +7,6 @@ jobs:
     steps :
       - name: apt-add
         run: |
-          echo "deb [trusted=yes] https://packagecloud.io/grafana/stable/ubuntu focal main" > /etc/apt/sources.list.d/99fd.io.list
-          sudo curl https://packagecloud.io/gpg.key | sudo apt-key add -
+          curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
           sudo apt-get update
           sudo apt install grafana -y
