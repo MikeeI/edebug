@@ -9,6 +9,7 @@ jobs:
         run: |
           curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
           sudo apt-get update
+          apt-key fingerprint
           apt-cache policy brotli
           sudo apt install brotli -y
           #nginx -t
